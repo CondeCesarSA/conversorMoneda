@@ -8,6 +8,7 @@ public class Main {
         // mensaje del cuadro de diálogo
         String message = "Selecione una opción de conversión:";
         int opcionSN;
+
         // muestra el cuadro de diálogo y recupera la opción seleccionada
         int selectedOption = JOptionPane.showOptionDialog(
                 null,
@@ -42,6 +43,7 @@ public class Main {
 
                 double input = utils.readNumber("Ingresa la cantidad de "+ optionsSelect + " que deseas convertir.");
 
+                assert optionsSelect != null;
                 utils.desitionC(input,optionCurrency,optionsSelect);
                 opcionSN = JOptionPane.showOptionDialog(
                         null,
@@ -74,6 +76,7 @@ public class Main {
 
                 double input = utils.readNumber("Ingresa la cantidad de "+ optionsSelect + " que deseas convertir.");
 
+                assert optionsSelect != null;
                 utils.designationT(input,optionTemperature,optionsSelect);
                 opcionSN = JOptionPane.showOptionDialog(
                         null,

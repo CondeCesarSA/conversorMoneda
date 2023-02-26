@@ -1,5 +1,4 @@
 import Conversor.Money;
-
 import javax.swing.*;
 import java.text.DecimalFormat;
 
@@ -64,9 +63,14 @@ public class Utils {
                 return number;
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "No ingresó un número válido. Inténtelo de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
+            } catch (NullPointerException e){
+                programEndless();
             }
         }
     }
+
+
+
     public void designationT(double input, String[] optionsSelect, String selectedItem) {
         String[] items = selectedItem.split(" a ");
         String fromTemp = items[0];
