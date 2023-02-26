@@ -85,7 +85,7 @@ public class Utils {
         } else if(fromTemp.equals("Kelvin") && toTemp.equals("Celsius")) {
             result = kelvinToCelsius(input);
         }
-        JOptionPane.showMessageDialog(null, input + " " + fromTemp + " son " + result + " " + toTemp);
+        JOptionPane.showMessageDialog(null, input + " " + fromTemp + " son " + df.format(result) + " " + toTemp);
     }
 
     public double celsiusToFahrenheit(double celsius) {
